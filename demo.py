@@ -1,11 +1,11 @@
 #this is a comment
-'''print('hello python. ', sep='')
-print('python is a programming lang')'''
+print('hello python. ', end = '', sep = ' ')
+print('python is a programming lang')
 
 '''
 This is a multi-line comment.
 Python isn't going to execute this.
-'''
+
 
 first_num = int(input("Enter first number: "))
 second_num = 5
@@ -22,4 +22,6 @@ q2 = first_num // second_num #floor divide (ans is in integer)
 
 print("Product of {} and {} is {}".format(first_num, second_num, str(prod)))
 
-print(f"{first_num} / {second_num} = {q}")
+#print("Product of {x} and {y} is {z}".format_map(dict1))
+
+print(f"{first_num} / {second_num} = {q}")'''
