@@ -1,5 +1,5 @@
 #this is a comment
-print('hello python. ', end = '', sep = ' ')
+print('hello python. ', end='')
 print('python is a programming lang')
 
 '''

@@ -38,3 +38,5 @@ for i in range(100):
     t.penup()
     t.setposition(x,y)
     t.pendown()
+
+t.
