@@ -1,13 +1,4 @@
-'''
 
-
-
-
-
-
-
-
-'''
 for i in range(20):
 	counter = i
 	if i==10:
