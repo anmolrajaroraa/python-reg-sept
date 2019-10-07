@@ -1,10 +1,11 @@
 from datetime import *
-import os, random, subprocess
+import os, random, subprocess, webbrowser
 
 helloIntent = ['hi', 'hello', 'namaste', 'bonjour']
 timeIntent = ['what\'s the time', 'time please', 'tell me the current time']
 dateIntent = ['what\'s the date today', 'date please', 'tell me today\'s date']
 musicIntent = ['play a song', 'play some song for me', 'play a random song']
+apps = ['calc', 'notepad', 'python']
 
 while True:
 
@@ -27,6 +28,20 @@ while True:
         songs = os.listdir( )
         song = random.choice( songs )
         subprocess.call( [ 'open' , song ] )
+    elif message.startswith("open"):
+        websiteName = message.partition(' ')[-1]
+        webbrowser.open(f"https://{websiteName}.com")
+    elif message.startswith('run'):
+        appName = message.partition( ' ' )[-1]
+        subprocess.call( [ 'open' ,'/Applications/' + appName + '.app' ] )
+        if appName in apps:
+            #os.system(appName)
+            pass
+        else:
+            pass
+            #path = input('Please enter complete path till application')
+            #path = C:\\users\\username\\Downloads\\vlc.exe
+            #os.startfile(path)
     elif message == 'bye':
         print('Bye!')
         break
