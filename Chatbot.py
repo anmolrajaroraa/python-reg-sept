@@ -1,5 +1,9 @@
 from datetime import *
+# import datetime
 import os, random, subprocess, webbrowser
+# datetime.date()
+# date.today()
+#time.now()
 
 helloIntent = ['hi', 'hello', 'namaste', 'bonjour']
 timeIntent = ['what\'s the time', 'time please', 'tell me the current time']
@@ -25,8 +29,10 @@ while True:
         print(f"{today.day}/{today.month}/{today.year}" )
     elif message in musicIntent:
         os.chdir('/Users/anmolrajarora/Documents/python' )
+        #os.chdir('C:\\Users\\Sanatan\\Music')
         songs = os.listdir( )
         song = random.choice( songs )
+        #os.startfile(song)
         subprocess.call( [ 'open' , song ] )
     elif message.startswith("open"):
         websiteName = message.partition(' ')[-1]
