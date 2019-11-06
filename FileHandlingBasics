@@ -1,0 +1,11 @@
+File Handling
+
+1. Read - r, r+ (File should exist)
+2. Write - w,w+ (File will be created if not found)
+3. Append - a,a+ (same as w+ but cursor will start from end position
+
+Binary - rb,wb,ab,rb+,wb+,ab+
+
+1. Open
+2. r/w/a
+3. Close
