@@ -25,16 +25,17 @@ import io, os
 # print(data)
 
 path = 'file.txt'
+file = None
 try:
     data = "This is appended text"
-    file = open(path, 'r')
+    file = open(path, 'a+')
     file.write(data)
     print(file.tell())
     file.seek(10)
     print( file.tell( ) )
     # print(file.read())
-    # file.seek(-3, 2)     Use 0 (beg), 1(curr), 2(end) options for 2nd argument
-    # print( file.tell( ) )
+    file.seek(0, 2)     #Use 0 (beg), 1(curr), 2(end) options for 2nd argument
+    print( file.tell( ) )
     print(file.read() + '...')
 except io.UnsupportedOperation as err:
     print(err)
@@ -43,6 +44,14 @@ except FileNotFoundError as err:
 except BaseException as err:
     print(err)
 finally:
-    if os.path.exists(path):
+    '''if os.path.exists(path):
         file.close()
-        print("Closed the file")
+        print("Closed the file")'''
+    if file != None:
+        file.close()
+
+'''file = open('32.jpg', 'rb')
+data = file.read()
+file.close()
+file = open('image.jpg', 'wb')
+file.write(data)'''
